@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: zupcmyorder 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: zupcmyorder 
+    spec:
+      containers:
+        - name: zupcmyorder 
+          image: user05acr.azurecr.io/zupcmyorder
+          ports:
+          - containerPort: 8080
